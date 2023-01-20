@@ -21,7 +21,6 @@ export default function Home() {
       } catch (error) {
         console.log(error);
       }
-      console.log(process.env.API_KEY);
 
     };
     fetchWeatherData();
