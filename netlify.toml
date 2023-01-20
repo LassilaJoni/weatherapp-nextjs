@@ -4,6 +4,3 @@ package = "@netlify/plugin-nextjs"
 [build]
 command = "yarn next build"
 publish = ".next"
- environment = {
-    API_KEY = "5a9eafd53d67380a70dd756503ed3181"
-  }
