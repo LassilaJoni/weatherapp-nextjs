@@ -14,9 +14,15 @@ export default function Home() {
 
   useEffect(() => {
     const fetchWeatherData = async () => {
-      const data = await getFormattedWeatherData(city, units);
-      console.log(data);
-      setWeather(data);
+      try {
+        const data = await getFormattedWeatherData(city, units);
+        console.log(data);
+        setWeather(data);
+      } catch (error) {
+        console.log(error);
+      }
+      console.log(process.env.API_KEY);
+
     };
     fetchWeatherData();
     }, [city,units])

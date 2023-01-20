@@ -1,5 +1,4 @@
-const API_KEY1 = 'f47d91c78b4ac3921dc8e2de289e8260'
-const API_KEY = '5a9eafd53d67380a70dd756503ed3181'
+const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
 
 
 const makeIconURL = (icon) => {
