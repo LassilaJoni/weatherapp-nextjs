@@ -5,15 +5,6 @@ const makeIconURL = (icon) => {
     return `http://openweathermap.org/img/wn/${icon}@2x.png`
 }
 
-exports.handler = async function (event, context) {
-    const value = process.env.API_KEY;
-  
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ message: `Value of MY_IMPORTANT_VARIABLE is ${value}.` }),
-    };  
-  };
-
 const getFormattedWeatherData = async (city, units) => {
     const URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API}&units=${units}`;
 
