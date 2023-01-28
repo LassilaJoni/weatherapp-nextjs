@@ -6,7 +6,7 @@ const makeIconURL = (icon) => {
 }
 
 exports.handler = async function (event, context) {
-    const value = process.env.MY_IMPORTANT_VARIABLE;
+    const value = process.env.API_KEY;
   
     return {
       statusCode: 200,
