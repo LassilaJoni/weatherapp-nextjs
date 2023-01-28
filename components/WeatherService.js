@@ -1,12 +1,12 @@
 
-const API_KEY = process.env.API_KEY_TEST;
+const API = process.env.API_KEY;
 
 const makeIconURL = (icon) => {
     return `http://openweathermap.org/img/wn/${icon}@2x.png`
 }
 
 const getFormattedWeatherData = async (city, units) => {
-    const URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=${units}`;
+    const URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API}&units=${units}`;
 
 const data = await fetch(URL)
 .then((res) => res.json())
